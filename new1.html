@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hhh</title>
+</head>
+<body>
+<form>
+    <p>
+        <label> Meters</label>
+
+    <input id="Meters" type="number"
+           oninput="chuyendoinhietdo(this.value)"
+           onchange="chuyendoinhietdo(this.value)">
+    </p>
+    <p> Feet :<span id="F"></span></p>
+</form>
+<script>
+function chuyendoinhietdo(l) {
+    l = parseFloat(l);
+    document.getElementById("F").innerHTML=3.279 * l;
+}
+</script>
+<form>
+    <p>
+        <label>Feet</label>
+        <input id="F1" type="number"
+               oninput="chuyendoidonvi(this.value)"
+               onchange="chuyendoidonvi(this.value)">
+    </p>
+    <p>Meters :<span id="Me"></span></p>
+</form>
+<script>
+    function chuyendoidonvi(vcs) {
+        vcs = parseFloat(vcs);
+        document.getElementById("Me").innerHTML=0.305*vcs;
+    }
+</script>
+</body>
+</html>
